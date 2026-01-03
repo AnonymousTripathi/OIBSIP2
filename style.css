@@ -1,0 +1,156 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #0b0b0b;
+    color: #ffffff;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    gap: 40px;
+    background: linear-gradient(to right, #000000, #1a1a1a);
+}
+
+/* HERO TEXT */
+.hero-text {
+    flex: 1;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #ff7a00;
+    margin-bottom: 10px;
+}
+
+.hero-text h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #dddddd;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    animation: slideInRight 1s ease forwards;
+}
+
+.hero-image img {
+    width: 280px;
+    border-radius: 14px;
+    border: 4px solid #ff7a00;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(255, 122, 0, 0.6);
+}
+
+/* CONTENT SECTION */
+.content {
+    padding: 60px 10%;
+    background: #ffffff;
+    color: #000000;
+}
+
+.content-block {
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+.content-block:hover {
+    transform: translateX(10px);
+}
+
+.content h2 {
+    color: #ff7a00;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* QUOTE */
+.quote-section {
+    background: #000000;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 3px solid #ff7a00;
+    border-bottom: 3px solid #ff7a00;
+}
+
+.quote-section p {
+    font-size: 22px;
+    font-style: italic;
+    color: #ffffff;
+}
+
+/* FOOTER */
+footer {
+    background: #0b0b0b;
+    text-align: center;
+    padding: 20px;
+    color: #ff7a00;
+}
+
+/* ANIMATIONS */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-image img {
+        width: 220px;
+    }
+}
